@@ -1,0 +1,23 @@
+__pycache__/
+*.py[cod]
+*.so
+*.egg-info/
+.venv/
+venv/
+env/
+.ipynb_checkpoints/
+.DS_Store
+
+# Data
+data/Kvasir-SEG/
+data/CVC-ClinicDB/
+
+# Training outputs
+runs/
+checkpoints/
+*.ckpt
+*.pth
+*.pt
+
+# Logs
+*.log
