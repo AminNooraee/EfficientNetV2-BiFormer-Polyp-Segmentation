@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite this repository and the associated manuscript."
+title: "EfficientNetV2-BiFormer Polyp Segmentation"
+type: software
+authors:
+  - family-names: "Nooraee"
+    given-names: "Amin"
+repository-code: "https://github.com/AminNooraee/EfficientNetV2-BiFormer-Polyp-Segmentation"
+date-released: 2026-08-29
+license: MIT
