@@ -19,7 +19,6 @@ The public implementation was cleaned and reorganized from the experiment notebo
 | Kvasir-SEG | 92.85 | 88.02 | 93.07 | 93.92 |
 | CVC-ClinicDB | 95.02 | 92.83 | 96.24 | 96.15 |
 
-The manuscript additionally reports Accuracy = 94.04% on CVC-ClinicDB.
 
 ## Architecture
 
