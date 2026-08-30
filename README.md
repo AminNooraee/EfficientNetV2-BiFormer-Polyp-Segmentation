@@ -19,6 +19,18 @@ The public implementation was cleaned and reorganized from the experiment notebo
 | Kvasir-SEG | 92.85 | 88.02 | 93.07 | 93.92 |
 | CVC-ClinicDB | 95.02 | 92.83 | 96.24 | 96.15 |
 
+## Cross-dataset generalization
+
+To assess generalization beyond within-dataset evaluation, supplementary cross-dataset experiments were performed in both directions. For each experiment, **90% of the source dataset** was used for training and **10% for source-domain validation/model selection**. The **entire target dataset** was then used as an external test set. No target-domain images were used during training or validation, and **no fine-tuning was performed on the target dataset**.
+
+| Source training dataset | External test dataset | Dice (%) | IoU (%) | Precision (%) | Recall (%) |
+|---|---|---:|---:|---:|---:|
+| Kvasir-SEG | CVC-ClinicDB | 91.85 | 85.66 | 96.30 | 88.33 |
+| CVC-ClinicDB | Kvasir-SEG | 86.40 | 77.16 | 83.92 | 89.67 |
+
+For these supplementary runs, the maximum number of epochs was set to **100** with early-stopping patience of **10**. Model selection was based only on the source-domain validation set. The target dataset remained completely unseen until final external evaluation.
+
+The stronger performance in the Kvasir-SEG → CVC-ClinicDB direction suggests that training on the larger and more diverse Kvasir-SEG dataset provides representations that transfer more effectively to CVC-ClinicDB. The reverse direction is more challenging, while still retaining substantial segmentation performance without target-domain adaptation.
 
 ## Architecture
 
